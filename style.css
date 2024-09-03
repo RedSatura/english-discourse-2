@@ -34,33 +34,48 @@ header {
 }
 
 .book-info-bg {
-    background-color: rgba(19, 32, 25, 0.568);
+    background-color: rgb(19, 32, 25);
     padding: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    animation: fade-in 1s;
 }
 
 .book-information h1 {
     display: inline;
 }
 
+@font-face {
+    font-family: "Reggae One";
+    src: url("media/fonts/Reggae_One/ReggaeOne-Regular.ttf");
+}
+
 #alamat-ng-gubat {
     margin: 0;
     font-size: 4rem;
     font-weight: 600;
+    font-family: 'Reggae One';
+    text-shadow: 2px 2px orange;
 }
 
 #lit-by-bob {
     margin: 0;
     font-size: 2rem;
     font-weight: 200;
+    font-family: "Reggae One";
+    text-shadow: 1px 1px red;
 }
 
 #book-img {
     filter: drop-shadow(10px 0 10px rgba(0, 0, 0, 0.7));
     width: 100%;
+    transition: transform 0.2s;
+}
+
+#book-img:hover {
+    transform: scale(1.1);
 }
 
 .book-info {
@@ -70,7 +85,7 @@ header {
 /* introduction */
 .introduction {
     min-height: 100vmin;
-    background-color: #85ad85c4;
+    background-image: linear-gradient(180deg, #FFFFFFFF 0%, #D1FFD7FF 100%);
     margin: 0;
     display: flex;
     color: rgb(39, 28, 5);
@@ -79,9 +94,11 @@ header {
 
 #introduction {
     margin: 0;
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 20px;
     text-align: center;
+    font-family: 'Reggae One';
+    text-shadow: 2px 2px goldenrod;
 }
 
 .introduction-text {
@@ -107,6 +124,11 @@ header {
 #intro-img {
     width: 50%;
     filter: drop-shadow(10px 0 10px rgba(0, 0, 0, 0.7));
+    transition: transform 0.2s;
+}
+
+#intro-img:hover {
+    transform: scale(1.1);
 }
 
 /* paragraphs */
@@ -114,16 +136,22 @@ header {
     padding: 1rem;
     text-indent: 2rem;
     font-size: 18px;
-    background-color: lightblue;
+    background-color: rgb(238, 156, 131);
     border-radius: 20px 20px 0 20px;
     line-height: 1.5;
     filter: drop-shadow(10px 0 10px rgba(0, 0, 0, 0.7));
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.paragraph:hover {
+    transform: scale(1.1);
+    background-color: aliceblue;
 }
 
 /* summary */
 .summary {
     min-height: 100vmin;
-    background-color: #9dad85c4;
+    background-image: linear-gradient(180deg, rgba(209, 255, 215, 1) 0%, rgba(255, 255, 233, 0) 100%);
     margin: 0;
     padding: 5rem;
     display: flex;
@@ -141,7 +169,6 @@ header {
 }
 
 .summary-item {
-    padding: 1rem;
     background-color: azure;
     filter: drop-shadow(10px 0 10px rgba(0, 0, 0, 0.7));
     border-radius: 20px 20px 20px 0;
@@ -149,31 +176,38 @@ header {
     text-indent: 2rem;
     font-size: 18px;
     display: flex;
+    align-items: center;
+    flex-direction: row;
     gap: 1rem;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
-.summary-item p {
-    flex: 4;
+.summary-item:hover {
+    transform: scale(1.1);
+    background-color: lightcyan;
 }
 
 .summary-image {
     background-color: lightcoral;
-    flex: 1;
     filter: drop-shadow(10px 0 10px rgba(0, 0, 0, 0.3));
+    min-width: 128px;
+    min-height: 128px;
 }
 
 #summary {
     margin: 0;
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 20px;
     text-align: center;
+    font-family: 'Reggae One';
+    text-shadow: 2px 2px salmon;
 }
 
 /* explanation */
 .explanation {
     text-align: center;
     min-height: 100vmin;
-    background-color:rgba(54, 76, 97, 0.438);
+    background-image: linear-gradient(180deg, #FFFFFFFF 0%, #FFDAB9FF 100%);
     margin: 0;
     padding: 2rem;
     color: rgb(41, 34, 21);
@@ -197,6 +231,11 @@ header {
     text-align: left;
     font-size: 18px;
     gap: 1rem;
+    transition: transform 0.2s;
+}
+
+.explanation-item:hover {
+    transform: scale(1.1);
 }
 
 .explanation-item h1 {
@@ -218,12 +257,14 @@ header {
     margin: 0;
     font-size: 3rem;
     padding: 20px;
+    font-family: 'Reggae One';
+    text-shadow: 2px 2px brown;
 }
 
 /* conclusion */
 .conclusion {
     min-height: 100vmin;
-    background-color: rgba(255, 248, 220, 0.507);
+    background-image: linear-gradient(0deg, #FFFFFF00 0%, #FFDAB9FF 100%);
     margin: 0;
     padding: 2rem;
 }
@@ -246,6 +287,11 @@ header {
     border-radius: 20px 20px 0 20px;
     filter: drop-shadow(10px 0 10px rgba(0, 0, 0, 0.7));
     width: 50%;
+    transition: transform 0.2s;
+}
+
+.conclusion-item:hover {
+    transform: scale(1.1);
 }
 
 #conclusion {
@@ -260,6 +306,8 @@ header {
     margin: 0;
     text-indent: 1rem;
     padding: 3rem;
+    font-family: 'Reggae One';
+    text-shadow: 2px 2px green;
 }
 
 /* credits */
@@ -267,7 +315,7 @@ header {
     min-height: 100vmin;
     margin: 0;
     padding: 2rem;
-    background-color: rgba(156, 129, 92, 0.411);
+    background-color: rgb(224, 208, 208);
 }
 
 .credits-container {
@@ -285,13 +333,18 @@ header {
 }
 
 .credits-item {
-    background-color: rgba(106, 179, 106, 0.815);
+    background-color: rgba(132, 218, 132, 0.815);
     padding: 2rem;
     border-radius: 20px 20px 20px 0;
     filter: drop-shadow(10px 0 10px rgba(0, 0, 0, 0.7));
     display: flex;
     font-size: 16px;
     justify-content: space-between;
+    transition: transform 0.2s;
+}
+
+.credits-item:hover {
+    transform: scale(1.1);
 }
 
 .credits-item h2 {
@@ -317,6 +370,8 @@ header {
     font-size: 3rem;
     padding: 20px;
     text-align: center;
+    font-family: 'Reggae One';
+    text-shadow: 2px 2px orange;
 }
 
 .sources {
@@ -325,6 +380,11 @@ header {
     border-radius: 20px;
     padding: 1rem;
     filter: drop-shadow(10px 0 10px rgba(0, 0, 0, 0.7));
+    transition: transform 0.2s;
+}
+
+.sources:hover {
+    transform: scale(1.05);
 }
 
  #sources {
