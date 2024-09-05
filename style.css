@@ -242,14 +242,10 @@ header {
     display: inline;
 }
 
-.explanation-item p {
-    flex: 4;
-}
-
 .explanation-image {
     background-color: lightsalmon;
-    width: 100%;
-    flex: 3;
+    min-width: 256px;
+    min-height: 256px;
     filter: drop-shadow(10px 0 10px rgba(0, 0, 0, 0.7));
 }
 
@@ -340,6 +336,7 @@ header {
     display: flex;
     font-size: 16px;
     justify-content: space-between;
+    align-items: center;
     transition: transform 0.2s;
 }
 
@@ -361,8 +358,10 @@ header {
     background-color: white;
     filter: drop-shadow(10px 0 10px rgba(0, 0, 0, 0.7));
     border-radius:  50%;
-    width: 128px;
-    height: 128px;
+    min-width: 128px;
+    min-height: 128px;
+    max-width: 128px;
+    max-height: 128px;
 }
 
 #credits {
@@ -390,3 +389,129 @@ header {
  #sources {
     text-align: center;
  }
+
+ /* Responsive design */
+ /* bruh i didn't make this mobile first i regret this */
+ @media (max-width: 600px) {
+    /* title */
+    .book-info-bg {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-info {
+        padding: 1rem;
+    }
+
+    #alamat-ng-gubat {
+        font-size: 2rem;
+    }
+
+    #book-img {
+        width: 50%;
+    }
+
+    .book-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* introduction */
+    .introduction {
+        flex-direction: column;
+    }
+
+    .introduction-text {
+        padding: 0;
+    }
+
+    #introduction {
+        padding: 0;
+        font-size: 3rem;
+    }
+
+    .paragraph {
+        font-size: 16px;
+    }
+
+    .book-image {
+        padding: 0;
+    }
+
+    #intro-img {
+        width: 75%;
+    }
+
+    /* summary */
+    .summary {
+        padding: 2rem;
+    }
+
+    .summary-grid {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .summary-item {
+        flex-direction: column;
+        font-size: 16px;
+    }
+
+    #summary {
+        font-size: 3rem;
+        padding: 2rem;
+    }
+
+    /* explanation */
+    .explanation-container {
+        flex-direction: column;
+        margin: 0;
+        padding: 1rem;
+        gap: 3rem;
+    }
+
+    #explanation {
+        padding: 1rem;
+    }
+
+    .explanation-item {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    /* conclusion */
+    #conclusion-quote {
+        font-size: 3rem;
+    }
+
+    .conclusion-container {
+        padding: 1rem;
+    }
+
+    .conclusion-item {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    /* credits */
+    #credits {
+        padding: 0;
+    }
+
+    .credits-container {
+        flex-direction: column;
+    }
+
+    .members-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .sources {
+        width: 100%;
+        padding: 0;
+    }
+} 
