@@ -190,8 +190,8 @@ header {
 .summary-image {
     background-color: lightcoral;
     filter: drop-shadow(10px 0 10px rgba(0, 0, 0, 0.3));
-    min-width: 128px;
-    min-height: 128px;
+    min-width: 256px;
+    min-height: 256px;
 }
 
 #summary {
@@ -219,9 +219,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     max-width: 100%;
     height: 100%;
-    flex: 5;
+}
+
+.explanation-subcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #ppt {
@@ -478,6 +484,11 @@ header {
         margin: 0;
         padding: 1rem;
         gap: 3rem;
+    }
+
+    .explanation-subcontainer {
+        flex-direction: column;
+        padding: 0;
     }
 
     #explanation {
