@@ -247,6 +247,7 @@ header {
     font-size: 18px;
     gap: 1rem;
     transition: transform 0.2s;
+    flex: 1;
 }
 
 .explanation-item:hover {
